@@ -1,65 +1,52 @@
 import 'package:flutter/material.dart';
 import 'package:portfolio_app/widgets/mac_win_dialog.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 import '../values/colors.dart';
 
 // ignore: must_be_immutable
-class MyIcons extends StatefulWidget {
+class MyIcons extends StatelessWidget {
   String imagePath;
   String iconName;
   bool isBottomIcon;
-  MyIcons(
-      {super.key,
-      required this.imagePath,
-      required this.iconName,
-      required this.isBottomIcon});
 
-  @override
-  State<MyIcons> createState() => _MyIconsState();
-}
+  MyIcons({
+    super.key,
+    required this.imagePath,
+    required this.iconName,
+    required this.isBottomIcon,
+  });
 
-class _MyIconsState extends State<MyIcons> {
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: [
-        InkWell(
-          onTap: () {
-            setState(() {
-              MacWinDialog(
-                  title: 'Title',
-                  message: 'lov u',
-                  onConfirm: Navigator.of(context).pop);
-            });
-          },
-          onDoubleTap: () {
-            MacWinDialog(
-                title: 'Title',
-                message: 'lov u',
-                onConfirm: Navigator.of(context).pop);
-          },
-          child: Card(
+    return InkWell(
+      splashColor: Colors.amber,
+      hoverColor: Colors.amber,
+      onTap: () {},
+      child: Column(
+        children: [
+          Card(
             child: Container(
-              width: !widget.isBottomIcon ? 70 : 50,
-              height: !widget.isBottomIcon ? 70 : 50,
+              width: !isBottomIcon ? 70 : 50,
+              height: !isBottomIcon ? 70 : 50,
               decoration: BoxDecoration(
                   image: DecorationImage(
-                      image: AssetImage(widget.imagePath), fit: BoxFit.cover),
+                      image: AssetImage(imagePath), fit: BoxFit.cover),
                   color: Colors.white,
-                  borderRadius: BorderRadius.circular(50)),
+                  borderRadius: BorderRadius.circular(12)),
             ),
           ),
-        ),
-        !widget.isBottomIcon
-            ? Text(
-                widget.iconName,
-                style: normalText,
-              )
-            : const Text(''),
-        const SizedBox(
-          height: 15,
-        )
-      ],
+          !isBottomIcon
+              ? Text(
+                  iconName,
+                  style: normalText,
+                )
+              : const Text(''),
+          // SizedBox(
+          //   height: !widget.isBottomIcon ? 5 : 15,
+          // )
+        ],
+      ),
     );
   }
 }

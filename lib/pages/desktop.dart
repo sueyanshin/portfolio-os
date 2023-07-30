@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:portfolio_app/values/colors.dart';
+import 'package:portfolio_app/widgets/made_with_flutter.dart';
 import 'package:portfolio_app/widgets/my_icons.dart';
 import 'package:intl/intl.dart';
 
@@ -11,34 +12,41 @@ class Desktop extends StatefulWidget {
 }
 
 class _DesktopState extends State<Desktop> {
+  final Uri _github = Uri.parse('https://github.com/sueyanshin');
+
   @override
   Widget build(BuildContext context) {
     DateTime date = DateTime.now();
     String formattedDate = DateFormat("MMM d hh:mm a").format(date);
     return Scaffold(
+      extendBodyBehindAppBar: true,
       appBar: AppBar(
         toolbarHeight: 30,
-        backgroundColor: Colors.black,
-        leading: Image.asset('assets/icon-apple.png'),
-        title: const Padding(
-          padding: EdgeInsets.symmetric(horizontal: 8.0),
+        backgroundColor: Colors.transparent,
+        title: Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 8.0),
           child: Row(children: [
-            Text(
+            Image.asset(
+              'assets/icon-apple.png',
+              width: 25,
+            ),
+            const SizedBox(width: 20),
+            const Text(
               'Nge Sue',
               style: normalText,
             ),
-            SizedBox(width: 20),
-            Text(
+            const SizedBox(width: 20),
+            const Text(
               'About Me',
               style: normalText,
             ),
-            SizedBox(width: 20),
-            Text(
+            const SizedBox(width: 20),
+            const Text(
               'Contact',
               style: normalText,
             ),
-            SizedBox(width: 20),
-            Text(
+            const SizedBox(width: 20),
+            const Text(
               'My Projects',
               style: normalText,
             ),
@@ -82,30 +90,51 @@ class _DesktopState extends State<Desktop> {
 
         // icons
         Positioned(
-            top: 10,
+            top: 40,
             left: 20,
-            child: Column(
+            child: Row(
+              crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                MyIcons(
-                  imagePath: 'assets/icon-flutter.jpg',
-                  iconName: 'Projects',
-                  isBottomIcon: false,
+                Column(
+                  children: [
+                    MyIcons(
+                      imagePath: 'assets/icon-flutter.jpg',
+                      iconName: 'Projects',
+                      isBottomIcon: false,
+                    ),
+                    MyIcons(
+                      imagePath: 'assets/icon-cv.png',
+                      iconName: 'Resume',
+                      isBottomIcon: false,
+                    ),
+                    MyIcons(
+                      imagePath: 'assets/icon-github.png',
+                      iconName: 'Github',
+                      isBottomIcon: false,
+                    ),
+                    MyIcons(
+                      imagePath: 'assets/icon-linkedin.png',
+                      iconName: 'LinkedIn',
+                      isBottomIcon: false,
+                    )
+                  ],
                 ),
-                MyIcons(
-                  imagePath: 'assets/icon-cv.png',
-                  iconName: 'Resume',
-                  isBottomIcon: false,
+                const SizedBox(width: 20),
+                //2nd col
+                Column(
+                  children: [
+                    MyIcons(
+                      imagePath: 'assets/icon-fullscreen.png',
+                      iconName: 'Full Screen',
+                      isBottomIcon: false,
+                    ),
+                    MyIcons(
+                      imagePath: 'assets/icon-win.png',
+                      iconName: 'Windows Mode',
+                      isBottomIcon: false,
+                    ),
+                  ],
                 ),
-                MyIcons(
-                  imagePath: 'assets/icon-github.png',
-                  iconName: 'Github',
-                  isBottomIcon: false,
-                ),
-                MyIcons(
-                  imagePath: 'assets/icon-linkedin.png',
-                  iconName: 'Linkedin',
-                  isBottomIcon: false,
-                )
               ],
             )),
 
@@ -115,29 +144,42 @@ class _DesktopState extends State<Desktop> {
             bottom: 0,
             left: 0,
             right: 0,
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.center,
+            child: Column(
               children: [
-                MyIcons(
-                    imagePath: 'icon-safari.png',
-                    iconName: '',
-                    isBottomIcon: true),
-                MyIcons(
-                    imagePath: 'icon-mail-m.png',
-                    iconName: '',
-                    isBottomIcon: true),
-                MyIcons(
-                    imagePath: 'icon-flutter.jpg',
-                    iconName: '',
-                    isBottomIcon: true),
-                MyIcons(
-                    imagePath: 'icon-cal-m.png',
-                    iconName: '',
-                    isBottomIcon: true),
-                MyIcons(
-                    imagePath: 'icon-contact-m.png',
-                    iconName: '',
-                    isBottomIcon: true),
+                const MadeWithFlutter(),
+                const SizedBox(
+                  height: 10,
+                ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    MyIcons(
+                      imagePath: 'icon-safari.png',
+                      iconName: '',
+                      isBottomIcon: true,
+                    ),
+                    MyIcons(
+                      imagePath: 'icon-mail-m.png',
+                      iconName: '',
+                      isBottomIcon: true,
+                    ),
+                    MyIcons(
+                      imagePath: 'icon-flutter.jpg',
+                      iconName: '',
+                      isBottomIcon: true,
+                    ),
+                    MyIcons(
+                      imagePath: 'icon-cal-m.png',
+                      iconName: '',
+                      isBottomIcon: true,
+                    ),
+                    MyIcons(
+                      imagePath: 'icon-contact-m.png',
+                      iconName: '',
+                      isBottomIcon: true,
+                    ),
+                  ],
+                ),
               ],
             ))
       ]),

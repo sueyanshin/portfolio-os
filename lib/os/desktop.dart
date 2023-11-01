@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:portfolio_app/widgets/mac_app_bar.dart';
 import 'package:portfolio_app/widgets/made_with_flutter.dart';
 import 'package:portfolio_app/widgets/my_icons.dart';
+import 'package:portfolio_app/constants/constants.dart';
 // import 'package:webview_flutter/webview_flutter.dart';
 
 class Desktop extends StatelessWidget {
@@ -30,22 +31,22 @@ class Desktop extends StatelessWidget {
                   children: [
                     MyIcons(
                       imagePath: 'assets/icon-flutter.jpg',
-                      iconName: 'Projects',
+                      iconName: AppStrings.projects,
                       isBottomIcon: false,
                     ),
                     MyIcons(
                       imagePath: 'assets/icon-cv.png',
-                      iconName: 'Resume',
+                      iconName: AppStrings.resume,
                       isBottomIcon: false,
                     ),
                     MyIcons(
                       imagePath: 'assets/icon-github.png',
-                      iconName: 'Github',
+                      iconName: AppStrings.github,
                       isBottomIcon: false,
                     ),
                     MyIcons(
                       imagePath: 'assets/icon-linkedin.png',
-                      iconName: 'LinkedIn',
+                      iconName: AppStrings.linkedIn,
                       isBottomIcon: false,
                     )
                   ],
@@ -56,12 +57,12 @@ class Desktop extends StatelessWidget {
                   children: [
                     MyIcons(
                       imagePath: 'assets/icon-fullscreen.png',
-                      iconName: 'Full Screen',
+                      iconName: AppStrings.fullScreen,
                       isBottomIcon: false,
                     ),
                     MyIcons(
                       imagePath: 'assets/icon-win.png',
-                      iconName: 'Windows Mode',
+                      iconName: AppStrings.windowsMode,
                       isBottomIcon: false,
                     ),
                   ],

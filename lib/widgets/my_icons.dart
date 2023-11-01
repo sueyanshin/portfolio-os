@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 // import 'package:portfolio_app/widgets/mac_win_dialog.dart';
 // import 'package:url_launcher/url_launcher.dart';
 
-import '../constants/theme.dart';
+import '../constants/app_theme.dart';
 import 'package:webview_flutter/webview_flutter.dart';
 
 import 'show_dialog_box.dart';
@@ -60,34 +60,3 @@ class MyIcons extends StatelessWidget {
     );
   }
 }
-
-
-
-// void showWebPageDialog(BuildContext context, String iconName) {
-//   showDialog(
-//     context: context,
-//     builder: (BuildContext context) {
-//       return AlertDialog(
-//         title: Text(iconName),
-//         content: Container(
-//           width: MediaQuery.of(context).size.width / 2,
-//           height: 300, // Adjust the height as needed
-
-//           child: Text("Hello"),
-//           // child: WebView(
-//           //   initialUrl: 'https://github.com', // Replace with your URL
-//           //   javascriptMode: JavascriptMode.unrestricted,
-//           // ),
-//         ),
-//         actions: <Widget>[
-//           TextButton(
-//             onPressed: () {
-//               Navigator.of(context).pop();
-//             },
-//             child: Text('Close'),
-//           ),
-//         ],
-//       );
-//     },
-//   );
-// }

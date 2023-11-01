@@ -1,7 +1,6 @@
-import 'package:flutter/material.dart';
+import 'package:portfolio_app/constants/constants.dart';
 import 'package:portfolio_app/models/clock_model.dart';
 import 'package:provider/provider.dart';
-import '/constants/theme.dart';
 
 class MacAppBar extends StatelessWidget implements PreferredSizeWidget {
   const MacAppBar({super.key});
@@ -21,22 +20,22 @@ class MacAppBar extends StatelessWidget implements PreferredSizeWidget {
           ),
           const SizedBox(width: 20),
           const Text(
-            'Nge Sue',
+            AppStrings.ngeSue,
             style: normalText,
           ),
           const SizedBox(width: 20),
           const Text(
-            'About Me',
+            AppStrings.aboutMe,
             style: normalText,
           ),
           const SizedBox(width: 20),
           const Text(
-            'Contact',
+            AppStrings.contact,
             style: normalText,
           ),
           const SizedBox(width: 20),
           const Text(
-            'My Projects',
+            AppStrings.myProjects,
             style: normalText,
           ),
         ]),

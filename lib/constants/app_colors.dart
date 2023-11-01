@@ -4,4 +4,5 @@ class AppColors {
   AppColors._();
 
   static const Color transparentAppBar = Color.fromARGB(117, 0, 0, 0);
+  static const Color white = Colors.white;
 }

@@ -1,16 +1,10 @@
-# portfolio_app
+# portfolio_os
 
-A new Flutter project.
+Mac,Window,Android and IOS Operating System UI to show my portfolio.
 
-## Getting Started
-
-This project is a starting point for a Flutter application.
+- Project under development 🚧 [sys-os](https://www.sys-os.vercel.app) 👈
 
 A few resources to get you started if this is your first Flutter project:
 
 - [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
 - [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.

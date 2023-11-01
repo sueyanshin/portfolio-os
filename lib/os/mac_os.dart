@@ -91,31 +91,31 @@ class MacOs extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     MyIcons(
-                      imagePath: 'icon-safari.png',
+                      imagePath: 'assets/icon-safari.png',
                       iconName: '',
                       isBottomIcon: true,
                       iconSize: 50,
                     ),
                     MyIcons(
-                      imagePath: 'icon-mail-m.png',
+                      imagePath: 'assets/icon-mail-m.png',
                       iconName: '',
                       isBottomIcon: true,
                       iconSize: 50,
                     ),
                     MyIcons(
-                      imagePath: 'icon-flutter.jpg',
+                      imagePath: 'assets/icon-flutter.jpg',
                       iconName: '',
                       isBottomIcon: true,
                       iconSize: 50,
                     ),
                     MyIcons(
-                      imagePath: 'icon-cal-m.png',
+                      imagePath: 'assets/icon-cal-m.png',
                       iconName: '',
                       isBottomIcon: true,
                       iconSize: 50,
                     ),
                     MyIcons(
-                      imagePath: 'icon-contact-m.png',
+                      imagePath: 'assets/icon-contact-m.png',
                       iconName: '',
                       isBottomIcon: true,
                       iconSize: 50,

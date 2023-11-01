@@ -46,7 +46,7 @@ class MyIcons extends StatelessWidget {
               height: iconSize,
               decoration: BoxDecoration(
                   image: DecorationImage(
-                      image: AssetImage(imagePath), fit: BoxFit.cover),
+                      image: AssetImage(imagePath), fit: BoxFit.contain),
                   color: Colors.white,
                   borderRadius: BorderRadius.circular(12)),
             ),

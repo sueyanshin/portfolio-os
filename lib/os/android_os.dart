@@ -14,7 +14,7 @@ class AndroidOs extends StatelessWidget {
         Positioned.fill(
             child: Image.asset(
           'assets/bg-android.jpg',
-          fit: BoxFit.cover,
+          fit: BoxFit.fitWidth,
         )),
         Positioned(top: 0, child: MobileWeatherCard()),
         Positioned(
@@ -25,7 +25,7 @@ class AndroidOs extends StatelessWidget {
               children: [
                 // 1 st row
                 Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     MyIcons(
                       imagePath: 'assets/icon-flutter.jpg',
@@ -61,7 +61,7 @@ class AndroidOs extends StatelessWidget {
                 ),
                 // 2 nd row
                 Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     MyIcons(
                       imagePath: 'assets/icon-cal-a.png',
@@ -78,7 +78,7 @@ class AndroidOs extends StatelessWidget {
                     ),
                     const SizedBox(width: 6),
                     MyIcons(
-                      imagePath: 'assets/icon-twitter.png',
+                      imagePath: 'assets/icon-twitter.jpeg',
                       iconName: AppStrings.x,
                       isBottomIcon: false,
                       iconSize: 50,
@@ -99,7 +99,7 @@ class AndroidOs extends StatelessWidget {
                   //   isBottomIcon: false,
                   //   iconSize: 50,
                   // ),
-                  const SizedBox(width: 6),
+                  // const SizedBox(width: 6),
                   MyIcons(
                     imagePath: 'assets/icon-buy-coffee.png',
                     iconName: AppStrings.buyCoffee,
@@ -125,28 +125,28 @@ class AndroidOs extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     MyIcons(
-                      imagePath: 'icon-phone-a.png',
+                      imagePath: 'assets/icon-phone-a.png',
                       iconName: '',
                       isBottomIcon: true,
                       iconSize: 50,
                     ),
                     const SizedBox(width: 10),
                     MyIcons(
-                      imagePath: 'icon-chrome.png',
+                      imagePath: 'assets/icon-chrome.png',
                       iconName: '',
                       isBottomIcon: true,
                       iconSize: 50,
                     ),
                     const SizedBox(width: 10),
                     MyIcons(
-                      imagePath: 'icon-mail-a.png',
+                      imagePath: 'assets/icon-mail-a.png',
                       iconName: '',
                       isBottomIcon: true,
                       iconSize: 50,
                     ),
                     const SizedBox(width: 10),
                     MyIcons(
-                      imagePath: 'icon-contact-a.png',
+                      imagePath: 'assets/icon-contact-a.png',
                       iconName: '',
                       isBottomIcon: true,
                       iconSize: 50,

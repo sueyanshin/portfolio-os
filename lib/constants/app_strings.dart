@@ -17,4 +17,9 @@ class AppStrings {
   static const String linkedIn = "LinkedIn";
   static const String windowsMode = "Windows Mode";
   static const String fullScreen = "Full Screen";
+  static const String facebook = "Facebook";
+  static const String googleCalender = "Calender";
+  static const String ios = "ios";
+  static const String x = "X";
+  static const String buyCoffee = "Buy Me a \nCoffee";
 }

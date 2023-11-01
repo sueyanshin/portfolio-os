@@ -1,5 +1,5 @@
-import 'package:flutter/material.dart';
 import 'package:portfolio_app/constants/constants.dart';
+import 'package:portfolio_app/utils/responsive.dart';
 
 class MadeWithFlutter extends StatelessWidget {
   const MadeWithFlutter({super.key});
@@ -11,17 +11,17 @@ class MadeWithFlutter extends StatelessWidget {
       children: [
         Image.asset(
           'assets/icon-f.png',
-          width: 20,
+          width: Responsive.isMobile(context) ? 10 : 20,
         ),
         const SizedBox(width: 5),
-        const Text(
+        Text(
           ' Made with',
-          style: normalText,
+          style: Responsive.isMobile(context) ? madeWithText : normalText,
         ),
         const SizedBox(width: 5),
         const Text(
           'Flutter',
-          style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
+          style: flutterText,
         )
       ],
     );

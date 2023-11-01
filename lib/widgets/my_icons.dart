@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:portfolio_app/utils/responsive.dart';
 // import 'package:portfolio_app/widgets/mac_win_dialog.dart';
 // import 'package:url_launcher/url_launcher.dart';
 
@@ -11,17 +12,19 @@ import 'show_dialog_box.dart';
 class MyIcons extends StatelessWidget {
   String imagePath;
   String iconName;
-  bool isBottomIcon;
+  final bool? isBottomIcon;
+  double? iconSize;
 
-  MyIcons({
-    super.key,
-    required this.imagePath,
-    required this.iconName,
-    required this.isBottomIcon,
-  });
+  MyIcons(
+      {super.key,
+      required this.imagePath,
+      required this.iconName,
+      this.isBottomIcon,
+      this.iconSize});
 
   @override
   Widget build(BuildContext context) {
+    // iconSize = !isBottomIcon! ? 70 : 50;
     return InkWell(
       splashColor: Colors.amber,
       hoverColor: Colors.amber,
@@ -34,11 +37,13 @@ class MyIcons extends StatelessWidget {
         );
       },
       child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           Card(
             child: Container(
-              width: !isBottomIcon ? 70 : 50,
-              height: !isBottomIcon ? 70 : 50,
+              width: iconSize,
+              height: iconSize,
               decoration: BoxDecoration(
                   image: DecorationImage(
                       image: AssetImage(imagePath), fit: BoxFit.cover),
@@ -46,10 +51,12 @@ class MyIcons extends StatelessWidget {
                   borderRadius: BorderRadius.circular(12)),
             ),
           ),
-          !isBottomIcon
+          !isBottomIcon!
               ? Text(
                   iconName,
-                  style: normalText,
+                  style: Responsive.isMobile(context)
+                      ? mobileIconText
+                      : normalText,
                 )
               : const Text(''),
           // SizedBox(

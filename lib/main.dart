@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:portfolio_app/models/clock_model.dart';
-import 'package:portfolio_app/os/desktop.dart';
+import 'package:portfolio_app/os/android_os.dart';
+import 'package:portfolio_app/os/mac_os.dart';
 import 'package:portfolio_app/os/error_os.dart';
 import 'package:portfolio_app/utils/responsive.dart';
 import 'package:provider/provider.dart';
@@ -23,7 +24,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.blue),
         useMaterial3: true,
       ),
-      home: Responsive.isMobile(context) ? const ErrorOs() : const Desktop(),
+      home: Responsive.isMobile(context) ? const AndroidOs() : const MacOs(),
     );
   }
 }

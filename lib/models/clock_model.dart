@@ -5,7 +5,7 @@ import 'dart:async';
 class ClockModel with ChangeNotifier {
   DateTime _currentTime = DateTime.now();
   String get formattedDate =>
-      DateFormat("MMM d   hh:mm a").format(_currentTime);
+      DateFormat("EE, MMM d   hh:mm a").format(_currentTime);
 
   Timer? _timer;
 

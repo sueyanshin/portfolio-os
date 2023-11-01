@@ -10,9 +10,9 @@ class MacAppBar extends StatelessWidget implements PreferredSizeWidget {
     final clockModel = Provider.of<ClockModel>(context);
     return AppBar(
       toolbarHeight: 30,
-      backgroundColor: Colors.transparent,
+      backgroundColor: AppColors.transparentAppBar,
       title: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 8.0),
+        padding: const EdgeInsets.symmetric(horizontal: 8.0, vertical: 8.0),
         child: Row(children: [
           Image.asset(
             'assets/icon-apple.png',
@@ -54,7 +54,8 @@ class MacAppBar extends StatelessWidget implements PreferredSizeWidget {
                     color: Colors.white,
                     borderRadius: BorderRadius.circular(8)),
                 child: const Text(
-                  'en',
+                  'EN',
+                  style: langText,
                 ),
               ),
               const SizedBox(

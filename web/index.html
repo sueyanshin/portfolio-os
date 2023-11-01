@@ -48,10 +48,29 @@
         </div>
       </div>
     </div>
-    <!-- This script installs service_worker.js to provide PWA functionality to
-       application. For more information, see:
-       https://developers.google.com/web/fundamentals/primers/service-workers -->
+
     <script>
+      // added for render
+      let useHtml = true;
+
+      window.addEventListener("load", function (ev) {
+        _flutter.loader.loadEntrypoint({
+          serviceWorker: {
+            serviceWorkerVersion: serviceWorkerVersion,
+          },
+          onEntrypointLoaded: function (engineInitializer) {
+            let config = {
+              renderer: useHtml ? "html" : "canvaskit",
+            };
+            engineInitializer
+              .initializeEngine(config)
+              .then(function (appRunner) {
+                appRunner.runApp();
+              });
+          },
+        });
+      });
+
       var serviceWorkerVersion = null;
       var scriptLoaded = false;
       function loadMainDartJs() {
@@ -134,4 +153,3 @@
     </script>
   </body>
 </html>
-

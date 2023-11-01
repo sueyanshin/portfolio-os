@@ -20,67 +20,7 @@ class _DesktopState extends State<Desktop> {
     String formattedDate = DateFormat("MMM d hh:mm a").format(date);
     return Scaffold(
       extendBodyBehindAppBar: true,
-      appBar: AppBar(
-        toolbarHeight: 30,
-        backgroundColor: Colors.transparent,
-        title: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 8.0),
-          child: Row(children: [
-            Image.asset(
-              'assets/icon-apple.png',
-              width: 25,
-            ),
-            const SizedBox(width: 20),
-            const Text(
-              'Nge Sue',
-              style: normalText,
-            ),
-            const SizedBox(width: 20),
-            const Text(
-              'About Me',
-              style: normalText,
-            ),
-            const SizedBox(width: 20),
-            const Text(
-              'Contact',
-              style: normalText,
-            ),
-            const SizedBox(width: 20),
-            const Text(
-              'My Projects',
-              style: normalText,
-            ),
-          ]),
-        ),
-        actions: [
-          Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 20.0),
-            child: Row(
-              children: [
-                Container(
-                  width: 20,
-                  height: 20,
-                  color: Colors.white,
-                  child: const Text(
-                    'en',
-                    style: TextStyle(
-                        backgroundColor: Colors.white,
-                        fontWeight: FontWeight.bold),
-                  ),
-                ),
-                const SizedBox(
-                  width: 40,
-                ),
-                Text(
-                  formattedDate,
-                  style: const TextStyle(
-                      fontWeight: FontWeight.bold, color: Colors.white),
-                ),
-              ],
-            ),
-          )
-        ],
-      ),
+      appBar: createAppBar(formattedDate),
       body: Stack(children: [
         Positioned.fill(
             child: Image.asset(
@@ -183,6 +123,70 @@ class _DesktopState extends State<Desktop> {
               ],
             ))
       ]),
+    );
+  }
+
+  AppBar createAppBar(String formattedDate) {
+    return AppBar(
+      toolbarHeight: 30,
+      backgroundColor: Colors.transparent,
+      title: Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 8.0),
+        child: Row(children: [
+          Image.asset(
+            'assets/icon-apple.png',
+            width: 25,
+          ),
+          const SizedBox(width: 20),
+          const Text(
+            'Nge Sue',
+            style: normalText,
+          ),
+          const SizedBox(width: 20),
+          const Text(
+            'About Me',
+            style: normalText,
+          ),
+          const SizedBox(width: 20),
+          const Text(
+            'Contact',
+            style: normalText,
+          ),
+          const SizedBox(width: 20),
+          const Text(
+            'My Projects',
+            style: normalText,
+          ),
+        ]),
+      ),
+      actions: [
+        Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 20.0),
+          child: Row(
+            children: [
+              Container(
+                width: 20,
+                height: 20,
+                color: Colors.white,
+                child: const Text(
+                  'en',
+                  style: TextStyle(
+                      backgroundColor: Colors.white,
+                      fontWeight: FontWeight.bold),
+                ),
+              ),
+              const SizedBox(
+                width: 40,
+              ),
+              Text(
+                formattedDate,
+                style: const TextStyle(
+                    fontWeight: FontWeight.bold, color: Colors.white),
+              ),
+            ],
+          ),
+        )
+      ],
     );
   }
 }

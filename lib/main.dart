@@ -1,8 +1,14 @@
 import 'package:flutter/material.dart';
-import 'package:portfolio_app/pages/desktop.dart';
+import 'package:portfolio_app/models/clock_model.dart';
+import 'package:portfolio_app/os/desktop.dart';
+import 'package:portfolio_app/os/error_os.dart';
+import 'package:portfolio_app/utils/responsive.dart';
+import 'package:provider/provider.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(MultiProvider(
+      providers: [ChangeNotifierProvider(create: (context) => ClockModel())],
+      child: const MyApp()));
 }
 
 class MyApp extends StatelessWidget {
@@ -17,7 +23,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.blue),
         useMaterial3: true,
       ),
-      home: const Desktop(),
+      home: Responsive.isMobile(context) ? const ErrorOs() : const Desktop(),
     );
   }
 }

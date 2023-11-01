@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:portfolio_app/values/colors.dart';
+import 'package:portfolio_app/constants/theme.dart';
 
 class MadeWithFlutter extends StatelessWidget {
   const MadeWithFlutter({super.key});

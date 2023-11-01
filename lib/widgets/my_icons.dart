@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:portfolio_app/widgets/mac_win_dialog.dart';
-import 'package:url_launcher/url_launcher.dart';
+// import 'package:portfolio_app/widgets/mac_win_dialog.dart';
+// import 'package:url_launcher/url_launcher.dart';
 
-import '../values/colors.dart';
+import '../constants/theme.dart';
 
 // ignore: must_be_immutable
 class MyIcons extends StatelessWidget {

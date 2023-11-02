@@ -1,3 +1,4 @@
+import 'package:portfolio_app/widgets/mobile_spotify_player.dart';
 import 'package:portfolio_app/widgets/mobile_weather_card.dart';
 
 import '../constants/constants.dart';
@@ -27,7 +28,7 @@ class AndroidOs extends StatelessWidget {
             left: 0,
             right: 0,
             child: Padding(
-              padding: const EdgeInsets.all(8.0),
+              padding: const EdgeInsets.all(16.0),
               child: Column(
                 children: [
                   // 1 st row
@@ -66,6 +67,7 @@ class AndroidOs extends StatelessWidget {
                       // const SizedBox(width: 5),
                     ],
                   ),
+                  const SizedBox(height: 12),
                   // 2 nd row
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -99,21 +101,20 @@ class AndroidOs extends StatelessWidget {
                       ),
                     ],
                   ),
-                  Row(mainAxisAlignment: MainAxisAlignment.start, children: [
-                    // MyIcons(
-                    //   imagePath: 'assets/icon-cal-a.png',
-                    //   iconName: AppStrings.googleCalender,
-                    //   isBottomIcon: false,
-                    //   iconSize: 50,
-                    // ),
-                    // const SizedBox(width: 6),
-                    MyIcons(
-                      imagePath: 'assets/icon-buy-coffee.png',
-                      iconName: AppStrings.buyCoffee,
-                      isBottomIcon: false,
-                      iconSize: 50,
-                    ),
-                  ]),
+                  const SizedBox(height: 12),
+
+                  // coffee and spotify section
+                  Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        MyIcons(
+                          imagePath: 'assets/icon-buy-coffee.png',
+                          iconName: AppStrings.buyCoffee,
+                          isBottomIcon: false,
+                          iconSize: 50,
+                        ),
+                        MobileSpotifyPlayer(),
+                      ]),
                 ],
               ),
             )),
@@ -134,14 +135,14 @@ class AndroidOs extends StatelessWidget {
                   children: [
                     MyIcons(
                       imagePath: 'assets/icon-phone-a.png',
-                      iconName: '',
+                      iconName: 'phone',
                       isBottomIcon: true,
                       iconSize: 50,
                     ),
                     const SizedBox(width: 10),
                     MyIcons(
                       imagePath: 'assets/icon-chrome.png',
-                      iconName: '',
+                      iconName: 'browser',
                       isBottomIcon: true,
                       iconSize: 50,
                     ),

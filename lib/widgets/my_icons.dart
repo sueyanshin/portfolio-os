@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:portfolio_app/os/ios_os.dart';
 import 'package:portfolio_app/utils/responsive.dart';
+import 'package:portfolio_app/widgets/app_view.dart';
 // import 'package:portfolio_app/widgets/mac_win_dialog.dart';
 // import 'package:url_launcher/url_launcher.dart';
-
 import '../constants/app_theme.dart';
-import 'package:webview_flutter/webview_flutter.dart';
 
 import 'show_dialog_box.dart';
 
@@ -29,12 +29,7 @@ class MyIcons extends StatelessWidget {
       splashColor: Colors.amber,
       hoverColor: Colors.amber,
       onTap: () {
-        showDialog(
-          context: context,
-          builder: (context) {
-            return ShowDialogBox(iconName: iconName);
-          },
-        );
+        checkIconName(context);
       },
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
@@ -66,4 +61,42 @@ class MyIcons extends StatelessWidget {
       ),
     );
   }
+
+  void checkIconName(BuildContext context) {
+    switch (iconName) {
+      case 'ios':
+        Navigator.push(
+            context,
+            MaterialPageRoute(
+              builder: (context) => IosOs(),
+            ));
+        break;
+      case 'browser':
+        Navigator.push(
+            context,
+            MaterialPageRoute(
+                builder: (context) =>
+                    AppView(url: "https://bento.me/sueyanshin")));
+        break;
+      case 'Facebook':
+        Navigator.push(
+            context,
+            MaterialPageRoute(
+                builder: (context) => AppView(url: "https://facebook.com")));
+        break;
+      default:
+        Navigator.push(
+            context, MaterialPageRoute(builder: (context) => IosOs()));
+
+        break;
+    }
+  }
+  //  if (iconName == 'ios') {
+  //   Navigator.push(
+  //       context,
+  //       MaterialPageRoute(
+  //         builder: (context) => IosOs(),
+  //       ));
+  // }
+  // }
 }

@@ -12,7 +12,7 @@ class MobileWeatherCard extends StatelessWidget {
           color: AppColors.transparentAppBar,
           borderRadius: BorderRadius.circular(12)),
       width: MediaQuery.of(context).size.width / 1.05,
-      height: 120,
+      height: 140,
       child: const Padding(
         padding: EdgeInsets.all(10.0),
         child: Row(
@@ -20,6 +20,7 @@ class MobileWeatherCard extends StatelessWidget {
           children: [
             // left col
             Column(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Icon(
@@ -39,7 +40,7 @@ class MobileWeatherCard extends StatelessWidget {
             ),
             // right col
             Column(
-              // mainAxisAlignment: MainAxisAlignment.end,
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
               crossAxisAlignment: CrossAxisAlignment.end,
               children: [
                 Text(

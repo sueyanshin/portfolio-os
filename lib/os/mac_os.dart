@@ -92,7 +92,7 @@ class MacOs extends StatelessWidget {
                   children: [
                     MyIcons(
                       imagePath: 'assets/icon-safari.png',
-                      iconName: '',
+                      iconName: 'browser',
                       isBottomIcon: true,
                       iconSize: 50,
                     ),

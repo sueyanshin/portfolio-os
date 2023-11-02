@@ -22,4 +22,12 @@ class AppStrings {
   static const String ios = "ios";
   static const String x = "X";
   static const String buyCoffee = "Buy Me a \nCoffee";
+
+  //spotify
+  static const String mariposa = "Mariposa";
+  static const String artist = "Peach Tree Rascals";
+  static const String play = "Play";
+  // static const String x = "X";
+  // static const String x = "X";
+  // static const String x = "X";
 }

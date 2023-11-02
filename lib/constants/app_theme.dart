@@ -14,3 +14,7 @@ const smallDegNum = TextStyle(color: AppColors.white);
 const cityName = TextStyle(color: AppColors.white, fontWeight: FontWeight.bold);
 const weatherInfo = TextStyle(fontSize: 12, color: AppColors.white);
 const tinyDegNum = TextStyle(fontSize: 12, color: Colors.white38);
+
+//spotify card
+const songName = TextStyle(fontSize: 12, color: Colors.white);
+const artistName = TextStyle(fontSize: 8, color: Colors.grey);

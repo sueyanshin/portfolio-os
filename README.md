@@ -2,7 +2,7 @@
 
 Mac,Window,Android and IOS Operating System UI to show my portfolio.
 
-- Project under development 🚧 [sys-os](https://www.sys-os.vercel.app) 👈
+- Project under development 🚧 [sys-os](https://sys-os.vercel.app) 👈
 
 A few resources to get you started if this is your first Flutter project:
 

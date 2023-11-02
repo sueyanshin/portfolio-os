@@ -1,5 +1,5 @@
 import 'package:portfolio_app/constants/constants.dart';
-import 'package:webview_flutter/webview_flutter.dart';
+// import 'package:webview_flutter/webview_flutter.dart';
 
 import 'show_dialog_box.dart';
 
@@ -21,23 +21,23 @@ class _AppViewState extends State<AppView> {
         body: Responsive.isMobile(context)
             ? Stack(
                 children: [
-                  WebView(
-                    initialUrl: widget.url,
-                    javascriptMode: JavascriptMode.unrestricted,
-                    initialMediaPlaybackPolicy:
-                        AutoMediaPlaybackPolicy.always_allow,
-                    onPageFinished: (String url) {
-                      print('Page finished loading: $url');
+                  // WebView(
+                  //   initialUrl: widget.url,
+                  //   javascriptMode: JavascriptMode.unrestricted,
+                  //   initialMediaPlaybackPolicy:
+                  //       AutoMediaPlaybackPolicy.always_allow,
+                  //   onPageFinished: (String url) {
+                  //     print('Page finished loading: $url');
 
-                      setState(() {
-                        isLoading = false;
-                      });
-                    },
-                  ),
-                  if (isLoading)
-                    const Center(
-                      child: CircularProgressIndicator(),
-                    )
+                  //     setState(() {
+                  //       isLoading = false;
+                  //     });
+                  //   },
+                  // ),
+
+                  const Center(
+                    child: CircularProgressIndicator(),
+                  )
                 ],
               )
             : ShowDialogBox(url: widget.url));

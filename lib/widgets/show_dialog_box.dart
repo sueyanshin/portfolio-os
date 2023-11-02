@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:webview_flutter/webview_flutter.dart';
+// import 'package:webview_flutter/webview_flutter.dart';
 
 class ShowDialogBox extends StatelessWidget {
   String url;
@@ -14,12 +14,12 @@ class ShowDialogBox extends StatelessWidget {
         height: 300, // Adjust the height as needed
 
         // child: Text("Hello"),
-        child: WebView(
-          initialUrl: url, // Replace with your URL
-          javascriptMode: JavascriptMode.unrestricted,
-          userAgent:
-              'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36',
-        ),
+        // child: WebView(
+        //   initialUrl: url, // Replace with your URL
+        //   javascriptMode: JavascriptMode.unrestricted,
+        //   userAgent:
+        //       'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36',
+        // ),
       ),
       actions: <Widget>[
         TextButton(
